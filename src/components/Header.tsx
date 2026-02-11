@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-festini.png";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -29,8 +30,8 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#inicio" className="font-heading text-2xl font-bold text-primary-foreground tracking-wider">
-          FESTINI <span className="text-accent">AÇOS</span>
+        <a href="#inicio">
+          <img src={logo} alt="Festini Aços" className="h-12" />
         </a>
 
         {/* Desktop Nav */}

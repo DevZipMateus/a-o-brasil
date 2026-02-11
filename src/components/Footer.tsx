@@ -1,12 +1,12 @@
+import logo from "@/assets/logo-festini.png";
+
 const Footer = () => {
   return (
     <footer className="gradient-dark py-12 border-t border-primary-foreground/10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
-            <h3 className="font-heading text-xl font-bold text-primary-foreground mb-3">
-              FESTINI <span className="text-accent">AÇOS</span>
-            </h3>
+            <img src={logo} alt="Festini Aços" className="h-14 mb-2 md:mx-0 mx-auto" />
             <p className="text-primary-foreground/50 text-sm leading-relaxed">
               Proteção que preserva o aço.<br />
               Confiança que preserva relações.

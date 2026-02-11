@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo-festini.png";
 
 const Hero = () => {
   return (
@@ -19,14 +20,15 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center pt-20">
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground tracking-wider mb-4"
+          className="mb-6"
         >
-          FESTINI <span className="text-accent">AÇOS</span>
-        </motion.h1>
+          <img src={logo} alt="Festini Aços" className="h-28 md:h-40 mx-auto" />
+          <h1 className="sr-only">Festini Aços</h1>
+        </motion.div>
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
