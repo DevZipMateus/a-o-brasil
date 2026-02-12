@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo-festini.png";
 
 const Hero = () => {
   return (
@@ -15,26 +14,25 @@ const Hero = () => {
           alt="Ambiente industrial com corte de aço e faíscas"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/65 to-black/90" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center pt-20">
-        <motion.div
+        <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-6"
+          className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-wider mb-6 drop-shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
         >
-          <img src={logo} alt="Festini Aços" className="h-28 md:h-40 mx-auto" />
-          <h1 className="sr-only">Festini Aços</h1>
-        </motion.div>
+          FESTINI <span className="text-accent">AÇOS</span>
+        </motion.h1>
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-body text-lg md:text-xl lg:text-2xl text-primary-foreground/80 max-w-3xl mx-auto mb-4 font-light"
+          className="font-body text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-4 font-light drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
         >
           Soluções completas em tubos e materiais de aço para a indústria brasileira — com mais de 25 anos de experiência no mercado.
         </motion.h2>
@@ -43,7 +41,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-accent font-heading text-base md:text-lg tracking-widest uppercase mb-10"
+          className="text-accent font-heading text-base md:text-lg tracking-widest uppercase mb-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
         >
           Proteção que preserva o aço. Confiança que preserva relações.
         </motion.p>
