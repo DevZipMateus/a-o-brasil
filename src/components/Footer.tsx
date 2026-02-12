@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
-            <img src={logo} alt="Festini Aços" className="h-14 mb-2 md:mx-0 mx-auto" />
+            <img src={logo} alt="Festini Aços" className="h-14 mb-2 md:mx-0 mx-auto rounded-lg" />
             <p className="text-primary-foreground/50 text-sm leading-relaxed">
               Proteção que preserva o aço.<br />
               Confiança que preserva relações.
