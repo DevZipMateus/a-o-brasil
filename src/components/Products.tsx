@@ -56,7 +56,7 @@ const Products = () => {
               className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-8 hover:border-accent/40 transition-colors duration-300"
             >
               <h3 className="font-heading text-2xl font-bold text-primary-foreground mb-4">{p.title}</h3>
-              <p className="text-primary-foreground/60 leading-relaxed">{p.desc}</p>
+              <p className="text-primary-foreground/60 leading-relaxed break-words">{p.desc}</p>
             </motion.div>
           ))}
         </motion.div>
