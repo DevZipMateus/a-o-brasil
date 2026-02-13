@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
+import { Phone, Mail, Clock, Instagram } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -32,7 +32,7 @@ const Contact = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto"
+          className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
         >
           {[
             {
@@ -48,15 +48,6 @@ const Contact = () => {
               title: "E-mail",
               lines: [
                 <a key="e" href="mailto:diego@festiniacos.com.br" className="hover:text-accent transition-colors break-all">diego@festiniacos.com.br</a>,
-              ],
-            },
-            {
-              icon: MapPin,
-              title: "Endereço",
-              lines: [
-                <span key="a">Av. Fabio Ferraz Bicudo, 894</span>,
-                <span key="b">Jd. Res. Dona Lucila</span>,
-                <span key="c">Indaiatuba / SP</span>,
               ],
             },
             {
