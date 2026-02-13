@@ -31,7 +31,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a href="#inicio">
-          <img src={logo} alt="Festini Aços" className="h-12 rounded-lg" />
+          <img src={logo} alt="Festini Aços" className="h-16 rounded-lg" />
         </a>
 
         {/* Desktop Nav */}
