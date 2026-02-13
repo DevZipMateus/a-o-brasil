@@ -56,10 +56,7 @@ const Services = () => {
               <div className="w-12 h-12 rounded-md gradient-accent flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <s.icon className="text-accent-foreground" size={22} />
               </div>
-              <div>
-                <span className="font-heading text-lg font-semibold text-foreground block">{s.name}</span>
-                <span className="text-muted-foreground text-xs uppercase tracking-widest">Serviço</span>
-              </div>
+              <span className="font-heading text-lg font-semibold text-foreground">{s.name}</span>
             </motion.div>
           ))}
         </motion.div>
