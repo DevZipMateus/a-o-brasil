@@ -70,8 +70,8 @@ const Markets = () => {
               custom={i}
               className="flex items-center gap-3 py-2.5 border-b border-primary-foreground/10 break-inside-avoid group cursor-default"
             >
-              <m.icon className="text-accent shrink-0 group-hover:scale-125 transition-transform duration-200" size={18} />
-              <span className="text-primary-foreground/70 text-base font-medium group-hover:text-accent transition-colors duration-200">
+              <m.icon className="text-accent shrink-0 group-hover:scale-125 transition-transform duration-200" size={20} />
+              <span className="text-primary-foreground/70 text-lg font-medium group-hover:text-accent transition-colors duration-200">
                 {m.name}
               </span>
             </motion.div>
