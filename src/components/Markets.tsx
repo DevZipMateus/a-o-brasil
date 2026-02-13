@@ -1,4 +1,11 @@
 import { motion } from "framer-motion";
+import {
+  Sprout, Flame, Building2, Zap, Ship, Columns3,
+  Cog, Wrench, TrainFront, Tractor, Settings, HardHat,
+  Factory, Mountain, TreePine, Truck, ShieldAlert, Thermometer,
+  CircleDot, MoreHorizontal,
+} from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -9,14 +16,27 @@ const fadeInUp = {
   }),
 };
 
-const markets = [
-  "Agrícola", "Caldeirarias", "Construção civil", "Energia e mineração",
-  "Estaleiros (indústria naval)", "Estruturas metálicas",
-  "Fabricantes de máquinas e equipamentos", "Ferramentaria", "Ferroviária",
-  "Implementos agrícolas", "Indústria mecânica", "Manutenção industrial",
-  "Metalúrgicas", "Mineração", "Papel e celulose", "Rodoviária",
-  "Sistemas de combate a incêndio", "Trocadores de calor",
-  "Usinagem e caldeiraria", "Entre outros",
+const markets: { name: string; icon: LucideIcon }[] = [
+  { name: "Agrícola", icon: Sprout },
+  { name: "Caldeirarias", icon: Flame },
+  { name: "Construção civil", icon: Building2 },
+  { name: "Energia e mineração", icon: Zap },
+  { name: "Estaleiros (indústria naval)", icon: Ship },
+  { name: "Estruturas metálicas", icon: Columns3 },
+  { name: "Fabricantes de máquinas e equipamentos", icon: Cog },
+  { name: "Ferramentaria", icon: Wrench },
+  { name: "Ferroviária", icon: TrainFront },
+  { name: "Implementos agrícolas", icon: Tractor },
+  { name: "Indústria mecânica", icon: Settings },
+  { name: "Manutenção industrial", icon: HardHat },
+  { name: "Metalúrgicas", icon: Factory },
+  { name: "Mineração", icon: Mountain },
+  { name: "Papel e celulose", icon: TreePine },
+  { name: "Rodoviária", icon: Truck },
+  { name: "Sistemas de combate a incêndio", icon: ShieldAlert },
+  { name: "Trocadores de calor", icon: Thermometer },
+  { name: "Usinagem e caldeiraria", icon: CircleDot },
+  { name: "Entre outros", icon: MoreHorizontal },
 ];
 
 const Markets = () => {
@@ -45,14 +65,14 @@ const Markets = () => {
         >
           {markets.map((m, i) => (
             <motion.div
-              key={m}
+              key={m.name}
               variants={fadeInUp}
               custom={i}
               className="flex items-center gap-3 py-2.5 border-b border-primary-foreground/10 break-inside-avoid group cursor-default"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 group-hover:scale-150 transition-transform duration-200" />
+              <m.icon className="text-accent shrink-0 group-hover:scale-125 transition-transform duration-200" size={16} />
               <span className="text-primary-foreground/70 text-sm font-medium group-hover:text-accent transition-colors duration-200">
-                {m}
+                {m.name}
               </span>
             </motion.div>
           ))}
