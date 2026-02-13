@@ -51,7 +51,7 @@ const Services = () => {
               key={s.name}
               variants={fadeInUp}
               custom={i}
-              className="flex items-center gap-4 bg-card rounded-lg p-5 shadow-card border border-border hover:shadow-elevated hover:border-accent/30 transition-all duration-300 group"
+              className="flex items-center gap-4 bg-card rounded-lg p-5 shadow-card border border-border hover:shadow-elevated hover:border-accent/30 hover:-translate-y-1 hover:scale-[1.03] transition-all duration-300 group"
             >
               <div className="w-14 h-14 rounded-md gradient-accent flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <s.icon className="text-accent-foreground" size={28} />
