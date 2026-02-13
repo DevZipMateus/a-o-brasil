@@ -53,10 +53,10 @@ const Services = () => {
               custom={i}
               className="flex items-center gap-4 bg-card rounded-lg p-5 shadow-card border border-border hover:shadow-elevated hover:border-accent/30 transition-all duration-300 group"
             >
-              <div className="w-12 h-12 rounded-md gradient-accent flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <s.icon className="text-accent-foreground" size={22} />
+              <div className="w-14 h-14 rounded-md gradient-accent flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <s.icon className="text-accent-foreground" size={28} />
               </div>
-              <span className="font-heading text-xl font-semibold text-foreground">{s.name}</span>
+              <span className="font-heading text-2xl font-bold text-foreground">{s.name}</span>
             </motion.div>
           ))}
         </motion.div>

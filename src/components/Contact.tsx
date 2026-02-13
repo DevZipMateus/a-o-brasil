@@ -78,7 +78,7 @@ const Contact = () => {
                 <item.icon className="text-accent-foreground" size={26} />
               </div>
               <h3 className="font-heading text-xl font-bold text-foreground mb-3">{item.title}</h3>
-              <div className="space-y-1 text-muted-foreground text-sm">
+              <div className="space-y-1 text-muted-foreground text-base">
                 {item.lines.map((line, j) => (
                   <div key={j}>{line}</div>
                 ))}
