@@ -32,7 +32,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-body text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-4 font-light drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
+          className="font-body text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-4 font-medium drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
         >
           Soluções completas em tubos e materiais de aço para a indústria brasileira — com mais de 25 anos de experiência no mercado.
         </motion.h2>
@@ -41,7 +41,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-accent font-heading text-base md:text-lg tracking-widest uppercase mb-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
+          className="text-accent font-heading text-base md:text-lg font-semibold tracking-widest uppercase mb-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
         >
           Proteção que preserva o aço. Confiança que preserva relações.
         </motion.p>
