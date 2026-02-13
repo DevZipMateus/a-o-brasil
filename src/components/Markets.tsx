@@ -41,17 +41,20 @@ const Markets = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto"
+          className="columns-2 md:columns-3 lg:columns-4 gap-x-8 gap-y-0 max-w-5xl mx-auto"
         >
           {markets.map((m, i) => (
-            <motion.span
+            <motion.div
               key={m}
               variants={fadeInUp}
               custom={i}
-              className="bg-primary-foreground/5 border border-primary-foreground/15 text-primary-foreground/80 px-5 py-2.5 rounded-full text-sm font-medium hover:border-accent/50 hover:text-accent transition-colors duration-200"
+              className="flex items-center gap-3 py-2.5 border-b border-primary-foreground/10 break-inside-avoid group cursor-default"
             >
-              {m}
-            </motion.span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 group-hover:scale-150 transition-transform duration-200" />
+              <span className="text-primary-foreground/70 text-sm font-medium group-hover:text-accent transition-colors duration-200">
+                {m}
+              </span>
+            </motion.div>
           ))}
         </motion.div>
       </div>
