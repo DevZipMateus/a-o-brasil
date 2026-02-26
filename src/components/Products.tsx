@@ -70,8 +70,8 @@ const Products = () => {
               <div className="relative z-10 p-8">
                 <span className="absolute top-0 left-0 w-1 h-full bg-accent rounded-r" />
                 <span className="text-accent font-heading text-xs uppercase tracking-[0.2em] mb-2 block">0{i + 1}</span>
-                <h3 className="font-heading text-2xl font-bold text-primary-foreground mb-4">{p.title}</h3>
-                <p className="text-primary-foreground/70 leading-relaxed break-words text-lg">{p.desc}</p>
+                <h3 className="font-heading text-2xl font-bold text-white mb-4">{p.title}</h3>
+                <p className="text-white/80 leading-relaxed break-words text-lg">{p.desc}</p>
               </div>
             </motion.div>
           ))}
