@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import productTubos from "@/assets/product-tubos.jpg";
+import productEletrodutos from "@/assets/product-eletrodutos.jpg";
+import productChapas from "@/assets/product-chapas.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -13,14 +16,17 @@ const products = [
   {
     title: "Tubos de condução",
     desc: "Com e sem costura, atendendo normas API 5L, NBR 5580/5590/6591/8261, ASTM A106/A178/A179/A333/A335/A671/A672, tubos calandrados e outros sob consulta.",
+    image: productTubos,
   },
   {
     title: "Eletrodutos",
     desc: "Nas normas NBR-5597 e NBR-5598 — Pré-zincado, galvanizado eletrolítico e galvanizado à fogo.",
+    image: productEletrodutos,
   },
   {
     title: "Chapas",
     desc: "Chapas de aço em diversas especificações para atender projetos industriais e estruturais.",
+    image: productChapas,
   },
 ];
 
@@ -53,12 +59,20 @@ const Products = () => {
               key={p.title}
               variants={fadeInUp}
               custom={i}
-              className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-8 hover:border-accent/40 transition-colors duration-300 relative overflow-hidden"
+              className="group border border-primary-foreground/10 rounded-lg overflow-hidden hover:border-accent/40 transition-colors duration-300 relative min-h-[320px] flex flex-col justify-end"
             >
-              <span className="absolute top-0 left-0 w-1 h-full bg-accent rounded-r" />
-              <span className="text-accent font-heading text-xs uppercase tracking-[0.2em] mb-2 block">0{i + 1}</span>
-              <h3 className="font-heading text-2xl font-bold text-primary-foreground mb-4">{p.title}</h3>
-              <p className="text-primary-foreground/60 leading-relaxed break-words text-lg">{p.desc}</p>
+              <img
+                src={p.image}
+                alt={p.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+              <div className="relative z-10 p-8">
+                <span className="absolute top-0 left-0 w-1 h-full bg-accent rounded-r" />
+                <span className="text-accent font-heading text-xs uppercase tracking-[0.2em] mb-2 block">0{i + 1}</span>
+                <h3 className="font-heading text-2xl font-bold text-primary-foreground mb-4">{p.title}</h3>
+                <p className="text-primary-foreground/70 leading-relaxed break-words text-lg">{p.desc}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
