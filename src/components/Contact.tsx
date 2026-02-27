@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, Clock, Instagram } from "lucide-react";
+import { Phone, Mail, Clock, Instagram, Linkedin, Facebook } from "lucide-react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -83,19 +83,31 @@ const Contact = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center mt-12"
+          className="mt-16"
         >
-          <motion.a
-            variants={fadeInUp}
-            custom={0}
-            href="https://www.instagram.com/festiniacos"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors font-medium"
-          >
-            <Instagram size={20} />
-            @festiniacos
-          </motion.a>
+          <motion.h3 variants={fadeInUp} custom={0} className="font-heading text-2xl font-bold text-foreground text-center mb-6">
+            Siga-nos nas redes sociais
+          </motion.h3>
+          <div className="flex justify-center gap-5">
+            {[
+              { icon: Instagram, href: "https://www.instagram.com/festiniacos", label: "Instagram" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/festini-a%C3%A7os/", label: "LinkedIn" },
+              { icon: Facebook, href: "https://www.facebook.com/share/1H5N4gy2Em/", label: "Facebook" },
+            ].map((social, i) => (
+              <motion.a
+                key={social.label}
+                variants={fadeInUp}
+                custom={i}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group w-14 h-14 rounded-full gradient-accent flex items-center justify-center shadow-elevated hover:scale-110 transition-transform duration-300"
+                aria-label={social.label}
+              >
+                <social.icon className="text-accent-foreground" size={24} />
+              </motion.a>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
