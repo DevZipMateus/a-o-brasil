@@ -1,10 +1,17 @@
 import logo from "@/assets/logo-festini.png";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
+
+const socials = [
+  { icon: Instagram, href: "https://www.instagram.com/festiniacos", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/festini-a%C3%A7os/", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/share/1H5N4gy2Em/", label: "Facebook" },
+];
 
 const Footer = () => {
   return (
     <footer className="gradient-dark py-12 border-t border-primary-foreground/10">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
+        <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
             <img src={logo} alt="Festini Aços" className="h-14 mb-2 md:mx-0 mx-auto rounded-lg" />
             <p className="text-primary-foreground/50 text-sm leading-relaxed">
@@ -18,6 +25,23 @@ const Footer = () => {
               <p><a href="https://wa.me/5511972591429" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">(11) 97259-1429</a></p>
               <p><a href="https://wa.me/5511970164597" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">(11) 97016-4597</a></p>
               <p><a href="mailto:diego@festiniacos.com.br" className="hover:text-accent transition-colors">diego@festiniacos.com.br</a></p>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-heading text-lg font-semibold text-primary-foreground mb-3">Redes Sociais</h3>
+            <div className="flex gap-3 md:justify-start justify-center">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full gradient-accent flex items-center justify-center hover:scale-110 transition-transform duration-300"
+                  aria-label={s.label}
+                >
+                  <s.icon className="text-accent-foreground" size={18} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
